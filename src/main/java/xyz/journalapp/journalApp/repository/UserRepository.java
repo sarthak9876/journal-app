@@ -13,7 +13,7 @@ import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User, ObjectId> {
 
-    //@Query("{ 'username' : ?0 }")
-    public List<User> findByUsername(String username);
-// Correct naming convention
+        User findByUserName(String userName);
+
+
 }

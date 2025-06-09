@@ -18,7 +18,7 @@ import java.util.Optional;
 public class UserService {
 
     @Autowired
-    private UserRepository userRepository ;
+    private UserRepository userRepository;
 
     public void saveEntry(User user) {
         userRepository.save(user);
@@ -31,6 +31,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
+
     public Optional<User> findById(ObjectId id) {
         return userRepository.findById(id);
     }
@@ -39,18 +40,16 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public List<User> findByUsername(User user) {
 
 
-        List<User> userInDb = userRepository.findByUsername(user.getUsername());
-        if (userInDb != null) {
-            userInDb.get(0).setUsername(user.getUsername());
-            userInDb.get(0).setPassword(user.getPassword());
-            saveAll(userInDb);
-        }
-        return userInDb;
+    public User findByUserName(String userName) {
+        return userRepository.findByUserName(userName);
     }
 
+
+//    public Optional<User> findById(ObjectId id) {
+//        return userRepository.findById(id);
+//    }
 
 
 
