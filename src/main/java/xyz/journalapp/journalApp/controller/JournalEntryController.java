@@ -1,6 +1,5 @@
 package xyz.journalapp.journalApp.controller;
 
-import org.bson.internal.BsonUtil;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +10,6 @@ import xyz.journalapp.journalApp.entity.User;
 import xyz.journalapp.journalApp.service.JournalAppService;
 import xyz.journalapp.journalApp.service.UserService;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,0 +1,10 @@
+spring.application.name=Journal App
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.port=27017
+spring.data.mongodb.uri=<YOUR_MONGO_DB_CLUSTER_URI>
+spring.data.mongodb.database=<YOUR_DATABASE_NAME>
+#server.port=8081
+
+spring.data.mongodb.auto-index-creation=true
+#logging.level.org.springframework=DEBUG
+#logging.level.org.springframework.data.mongodb=DEBUG
